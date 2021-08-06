@@ -15,10 +15,13 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('title'); // nome do post
+            $table->text('content'); // conteudo do post
+            $table->string('image'); // imagem de destaque
+            $table->integer('visits')->default(0);
+            $table->foreignId('author_id')->references('id')->on('users'); // id da categoria (foreign key)
+            $table->foreignId('category_id')->constrained(); // id do autor (foreign key)
             $table->timestamps();
-            $table->string('name'); //nome do post
-            $table->text('content'); //conteudo do post
-            $table->foreignId('author_id'); //id do autor (foreign key)
             $table->softDeletes();
         });
     }

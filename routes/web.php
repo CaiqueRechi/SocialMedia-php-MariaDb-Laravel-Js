@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,12 @@ Route::middleware(['guest'])->group(function() {
 });
 
 Route::middleware(['auth'])->group(function() {
-    Route::get('/home', function() {
-        return "Estou logado";
-    })->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+
+    Route::get('contato', function() {
+        return "Página de contato";
+    })->name('contact');
 
     Route::resource('/posts', PostsController::class);
     Route::resource('/users', UsersController::class);
