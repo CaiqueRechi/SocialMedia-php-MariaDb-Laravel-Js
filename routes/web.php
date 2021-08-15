@@ -6,6 +6,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Site\PostController;
+use App\Http\Controllers\Site\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('posts/{post}/{slug}', [PostController::class, 'show'])->name('posts.show');
 
-Route::get('contato', function() {
-    return "Página de contato";
+Route::get('contat', function() {
 })->name('contact');

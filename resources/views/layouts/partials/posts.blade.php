@@ -1,4 +1,4 @@
-<section id="blog" class="content-section">
+<section id="recent" class="content-section">
     <div class="section-heading">
         <h1>Posts<br><em>Recentes</em></h1>
         <p>Seleção de nossos Posts mais recentes: </p>

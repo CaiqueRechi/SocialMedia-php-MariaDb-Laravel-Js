@@ -1,5 +1,5 @@
 <section class="footer">
-    <p>Copyright &copy; 2019 Company Name
+    <p>Copyright &copy; 2021 Dagh LTDA
 
-        . Design: TemplateMo</p>
+        . Design: Toxic</p>
 </section>

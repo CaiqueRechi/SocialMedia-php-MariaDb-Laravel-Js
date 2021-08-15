@@ -11,6 +11,10 @@
         <h3> {{ ($post->content) }}
     </div>
 
+    <div align="right">
+        <h1> Views:   {{ $post->visits }}  
+        </h1>
+
     <div align="left">
         <h1> {{ $post->author['name'] }}
         <h2> {{ $post->created_at->format('d \d\e M \d\e Y \á\s H:i') }}

@@ -11,7 +11,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="#top">Home</a></li>
                 <li><a href="#featured">TOP Posts</a></li>
-                <li><a href="#blog">Últimas Postagens</a></li>
+                <li><a href="#recent">Últimas Postagens</a></li>
                 <li><a href="#contact">Entre em Contato</a></li>
             </ul>
         </nav>
@@ -20,7 +20,7 @@
 
 <div class="sidebar-navigation hidde-sm hidden-xs">
     <div class="logo">
-        <a href="#">Sen<em>tra</em></a>
+        <a href="{{ route('home') }}">D<em>agh</em></a>
     </div>
     <nav>
         <ul>
@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('home') }}">
+                <a href="#featured">
                     <span class="rect"></span>
                     <span class="circle"></span>
                     TOP Posts
@@ -43,6 +43,13 @@
                     <span class="rect"></span>
                     <span class="circle"></span>
                     Últimas Postagens
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('posts.create') }}">
+                    <span class="rect"></span>
+                    <span class="circle"></span>
+                    Nova Postagem
                 </a>
             </li>
             <li>

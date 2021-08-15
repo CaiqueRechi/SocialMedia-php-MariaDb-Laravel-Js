@@ -6,14 +6,14 @@
     <form method='post' action='{{ route("posts.store") }}'>
         @csrf
 
-        <div class='row'>
+        <div class='form-controll'>
             <div class='col-8'>
                 <div class='form-group'>
                     <label class='text-white'>
                         Titulo
                     </label>
 
-                    <input type='text' class='form-control' name='name' value='{{ old('name') }}'>
+                    <input type='text' class='form-control' name='title' value='{{ old('title') }}'>
                     @error('name')
                     <div class='small text-danger'>
                         {{ $message }}
@@ -51,6 +51,16 @@
                     </div>
                     @enderror
                 </div>
+
+                <div class="mb-3 input-group">
+                    <div class="custom-file">
+                      <input
+                       type="file"
+                       class="custom-file-input"
+                       id="inputGroupFile01"
+                       name='Imagem'
+                       accept="image/*">
+                    </div>
 
                 <div class='mt-4'>
                     <button class='btn btn-primary' type='submit'>Atualizar</button>
