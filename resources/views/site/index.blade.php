@@ -4,5 +4,5 @@
 
 @section('content')
     @include('layouts.partials.featured-posts', ['topPosts' => $topPosts])
-    @include('layouts.partials.posts', ['topPosts' => $posts])
+    @include('layouts.partials.posts', ['posts' => $posts])
 @endsection

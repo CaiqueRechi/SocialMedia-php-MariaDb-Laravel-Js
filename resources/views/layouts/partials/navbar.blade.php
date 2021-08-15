@@ -32,14 +32,14 @@
                 </a>
             </li>
             <li>
-                <a href="#featured">
+                <a href="{{ route('home') }}">
                     <span class="rect"></span>
                     <span class="circle"></span>
                     TOP Posts
                 </a>
             </li>
             <li>
-                <a href="#blog">
+                <a href="#recent">
                     <span class="rect"></span>
                     <span class="circle"></span>
                     Últimas Postagens
@@ -55,10 +55,8 @@
         </ul>
     </nav>
     <ul class="social-icons">
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.facebook.com/caique.rechi"><i class="fa fa-facebook"></i></a></li>
         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/caique-rechi-170595172/"><i class="fa fa-linkedin"></i></a></li>
     </ul>
 </div>

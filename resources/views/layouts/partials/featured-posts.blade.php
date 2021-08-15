@@ -14,12 +14,16 @@
                     <div class="image">
                         <img src="{{ asset(str_replace('public/', '', $post->image)) }}" alt="">
                         <div class="featured-button button">
-                            <a href="#projects">Continue Lendo</a>
+                            <a href="{{ route('posts.show', [$post->id, Str::slug($post->title)]) }}">
+                                Continue Lendo
+                            </a>
                         </div>
                     </div>
                     <div class="text-content">
                         <h4>{{ $post->title }}</h4>
-                        <span>{{ $post->created_at->format('d \d\e M \d\e Y \á\s H:i') . ' - ' . $post->author->name }}</span>
+                        <span>
+                            {{ $post->created_at->format('d \d\e M \d\e Y \á\s H:i') . ' - ' . $post->author->name }}
+                        </span>
                         <p>
                             {{ Str::limit($post->content, 100) }}
                         </p>

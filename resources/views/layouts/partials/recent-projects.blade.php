@@ -1,4 +1,4 @@
-<section id="projects" class="content-section">
+<section id="recent" class="content-section">
     <div class="section-heading">
         <h1>Recent<br><em>Projects</em></h1>
         <p>Praesent pellentesque efficitur magna,

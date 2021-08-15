@@ -5,6 +5,7 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Site\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,16 +21,21 @@ use App\Http\Controllers\HomeController;
 Route::middleware(['guest'])->group(function() {
     Route::get('/login', [LoginController::class, 'index'])->name('login.form');
     Route::post('/login', [LoginController::class, 'login'])->name('login');
+
 });
 
 Route::middleware(['auth'])->group(function() {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    Route::get('contato', function() {
-        return "Página de contato";
-    })->name('contact');
 
     Route::resource('/posts', PostsController::class);
     Route::resource('/users', UsersController::class);
 });
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('posts/{post}/{slug}', [PostController::class, 'show'])->name('posts.show');
+
+Route::get('contato', function() {
+    return "Página de contato";
+})->name('contact');
